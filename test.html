@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Your Website</title>
+  <style>
+    /* Header style */
+    header {
+      background-color: #f2f2f2 !important;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      max-width: 100px;
+      max-height: 100px;
+      border-radius: 50%;
+    }
+
+    .line-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .line {
+      flex-grow: 1;
+      height: 2px;
+      background-color: grey;
+    }
+
+    .header-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+
+    .header-text {
+      font-size: 14px;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    .header-title a {
+       text-decoration: none;
+       color: black;
+    }
+
+    .header-title a:hover {
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/cropped-legendre.jpg" alt="Logo">
+    </div>
+    <div class="line-wrapper">
+      <div class="line" style="width: 30%; margin-left: 100px; margin-right: 30px;"></div>
+      <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis: 50%;">
+        <h1 style="font-family:EB Garamond; padding-left: 0.5em; font-size: clamp(1.039rem, 1.039rem + ((1vw - 0.2rem) * 1.069), 1.6rem); font-style: normal; font-weight: 400; line-height: 1; text-transform: uppercase; letter-spacing: 0.5em;" class="has-text-align-center wp-block-site-title has-eb-garamond-font-family header-title">
+          <a href="https://mortanjt.github.io" target="_self" rel="home" aria-current="page">Math and musings</a>
+        </h1>
+        <p style="font-family:EB Garamond; margin-top: 0.5em; font-size: 0.8rem; font-style: italic; font-weight: 400;" class="has-text-align-center wp-block-site-tagline has-eb-garamond-font-family header-text">
+          Just learning and teaching
+        </p>
+      </div>
+      <div class="line" style="width: 30%; margin-left: 30px; margin-right: 100px;"></div>
+    </div>
+  </header>
+  <!-- Rest of your website content -->
+  <p>Inline equation: <script type="math/tex">E = mc^2</script></p>
+
+<p>Display equation:</p>
+<script type="math/tex; mode=display">
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+</script>
+<p>Inline equation: $E = mc^2$</p>
+
+<p>Display equation:</p>
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+</body>
+</html>
