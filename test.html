@@ -58,6 +58,9 @@
       text-decoration: none;
     }
 
+    
+
+
     body {
       background-color: #f2f2f2;
       font-family: Arial, sans-serif;
@@ -141,9 +144,12 @@
     }
 
     .header-links {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 200px 0; /* Add margin on the sides and use negative margin to move the links up */
+    position: relative; /* Add relative positioning to the links container */
+    top: -50px; /* Move the links up by the same amount as the negative margin */
+    z-index: 2; /* Ensure links appear above the body content */
     }
 
 
@@ -168,7 +174,16 @@
     </div>
   </header>
   
-  
+  <div class="header-links">
+    <div class="header-links-left">
+        <!-- Links to the top left -->
+        <a class="header-link" href="#">Top Left Link</a>
+    </div>
+    <div class="header-links-right">
+        <!-- Links to the top right -->
+        <a class="header-link" href="#">about</a>
+    </div>
+</div>
   
   
   <!-- Rest of your website content -->
