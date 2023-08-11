@@ -110,6 +110,23 @@
       bottom: 0;
       left: 0;
       width: 100%;
+      }
+
+    .footer-icons-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-icon {
+      display: inline-block;
+      margin: 0 10px; /* Adjust the margin as needed */
+      width: 30px; /* Set the width of the icon */
+      height: 30px; /* Set the height of the icon */
     }
 
     .header-link {
@@ -244,7 +261,16 @@ $$
 </div>
 
 <footer class="footer">
-  <p>stuff here</p>
+  <div class="footer-icons-container">
+    <div class="footer-icons">
+      <a href="https://www.twitch.tv/lubangel" class="footer-icon">
+        <img src="img/twitch-logo.png" alt="Icon 1" width="30" height="30">
+      </a>
+      <a href="https://example.com" class="footer-icon">
+        <img src="img/twitch-logo.png" alt="Icon 2" width="30" height="30">
+      </a>
+    </div>
+  </div>
 </footer>
 
 </body>
