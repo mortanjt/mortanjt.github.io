@@ -64,6 +64,10 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      display: flex;
+        flex-direction: column; /* Stack children vertically */
+        min-height: 100vh; /* Ensure the body takes at least the viewport height */
+
     }
 
     /* Styles for the text field */
@@ -111,6 +115,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
+      margin-top: auto; /* Push the footer to the bottom */
       }
 
     .footer-icons-container {
@@ -150,7 +155,31 @@
     z-index: 2; /* Ensure links appear above the body content */
     }
 
+    table {
+      border-collapse: collapse;
+      width: 60%; /* Adjust the width of the table */
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
 
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #dddddd;
+      min-width: 100px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
   </style>
 </head>
 <body>
