@@ -150,7 +150,81 @@
     z-index: 2; /* Ensure links appear above the body content */
     }
 
+    table {
+      border-collapse: collapse;
+      width: 60%; /* Adjust the width of the table */
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      border-radius: 10px;
+      border-top-left-radius: 10px; /* Add rounded corners to the top left corner of the header cells */
+        border-top-right-radius: 10px; /* Add rounded corners to the top right corner of the header cells */
+      overflow: hidden;
+    }
 
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #dddddd;
+      min-width: 300px;
+    }
+
+    th {
+      background-color: #d3d3d3;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .two-column-container {
+      display: flex;
+      align-items: flex-start;
+      margin: 0 auto; /* Center the container */
+      margin-left: 15%; /* Adjust the left margin to % of the page width */
+      margin-right: 15%; /* Adjust the right margin to % of the page width */
+      max-width: 70%; /* Set the max width of the container */
+      background-color: #b7b8ba87;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .text-bubble {
+      flex: 1;
+      padding: 0;
+      padding-right: 20px; /* Add spacing between text and image */
+    }
+
+    .text-bubble p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .image-column {
+      flex-basis: 300px;
+      max-width: 50%;
+      padding: 0;
+      background-color: #B19CD9;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .image-column img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .rounded-image {
+      border-radius: 10px; /* Rounded corners */
+    }
   </style>
 </head>
 <body>
