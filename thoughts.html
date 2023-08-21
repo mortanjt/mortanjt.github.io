@@ -184,6 +184,52 @@
         justify-content: center;
         text-align: center;
     }
+
+    .two-column-container {
+      display: flex;
+      align-items: flex-start;
+      margin: 0 auto; /* Center the container */
+      margin-left: 15%; /* Adjust the left margin to % of the page width */
+      margin-right: 15%; /* Adjust the right margin to % of the page width */
+      max-width: 70%; /* Set the max width of the container */
+      background-color: #b7b8ba87;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .text-bubble {
+      flex: 1;
+      padding: 0;
+      padding-right: 20px; /* Add spacing between text and image */
+    }
+
+    .text-bubble p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .image-column {
+      flex-basis: 300px;
+      max-width: 50%;
+      padding: 0;
+      background-color: #B19CD9;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .image-column img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .rounded-image {
+      border-radius: 10px; /* Rounded corners */
+    }
   </style>
 </head>
 <body>
@@ -252,6 +298,15 @@
         <!-- Add more rows as needed -->
       </tbody>
     </table>
+  </div>
+</div>
+
+<div class="two-column-container">
+  <div class="text-bubble">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget metus nulla.</p>
+  </div>
+  <div class="image-column">
+    <img src="img/cropped-legendre.jpg" alt="Image" class="rounded-image">
   </div>
 </div>
 
