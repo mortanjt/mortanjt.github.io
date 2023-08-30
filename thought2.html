@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>The making of</title>
+  <style>
+    /* Header style */
+    header {
+      background-color: #f2f2f2 !important;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      max-width: 100px;
+      max-height: 100px;
+      border-radius: 50%;
+    }
+
+    .line-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .line {
+      flex-grow: 1;
+      height: 2px;
+      background-color: grey;
+      margin-top: 15px;
+    }
+
+    .header-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+
+    .header-text {
+      font-size: 14px;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    .header-title a {
+       text-decoration: none;
+       color: black;
+    }
+
+    .header-title a:hover {
+      text-decoration: none;
+    }
+
+    
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+        flex-direction: column; /* Stack children vertically */
+        min-height: 100vh; /* Ensure the body takes at least the viewport height */
+
+    }
+
+    /* Styles for the text field */
+    .text-field1 {
+      margin: 0 auto; /* Center the text field */
+      width: 50%; /* Set the width to % of the page */
+      background-color: #a8b4e3;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-field2 {
+      margin: 0 auto; /* Center the text field */
+      margin-left: 15%; /* Adjust the left margin to % of the page width */
+      width: 40%; /* Set the width to % of the page */
+      background-color: #b7b8ba87;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .text-field3 {
+      margin: 0 auto; /* Center the text field */
+      margin-right: 15%; /* Adjust the right margin to % of the page width */
+      width: 40%; /* Set the width to % of the page */
+      background-color: #B19CD9;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-field-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-top: auto; /* Push the footer to the bottom */
+      }
+
+    .footer-icons-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-icon {
+      display: inline-block;
+      margin: 0 10px; /* Adjust the margin as needed */
+      width: 30px; /* Set the width of the icon */
+      height: 30px; /* Set the height of the icon */
+    }
+
+    .header-link {
+      margin: 5px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .header-link:hover {
+      text-decoration: underline;
+    }
+
+    .header-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 120px 0; /* Add margin on the sides and use negative margin to move the links up */
+    position: relative; /* Add relative positioning to the links container */
+    top: -50px; /* Move the links up by the same amount as the negative margin */
+    z-index: 2; /* Ensure links appear above the body content */
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 60%; /* Adjust the width of the table */
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      border-radius: 10px;
+      border-top-left-radius: 10px; /* Add rounded corners to the top left corner of the header cells */
+        border-top-right-radius: 10px; /* Add rounded corners to the top right corner of the header cells */
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #dddddd;
+      min-width: 300px;
+    }
+
+    th {
+      background-color: #d3d3d3;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .two-column-container {
+      display: flex;
+      align-items: flex-start;
+      margin: 0 auto; /* Center the container */
+      margin-left: 20%; /* Adjust the left margin to % of the page width */
+      margin-right: 20%; /* Adjust the right margin to % of the page width */
+      max-width: 70%; /* Set the max width of the container */
+      background-color: #C1E1C1;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .text-bubble {
+      flex: 1;
+      padding: 0;
+      padding-right: 20px; /* Add spacing between text and image */
+    }
+
+    .text-bubble p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .image-column {
+      flex-basis: 600px;
+      max-width: 50%;
+      padding: 0;
+      background-color: #B19CD9;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .image-column img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .rounded-image {
+      border-radius: 10px; /* Rounded corners */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/cropped-legendre.jpg" alt="Logo">
+    </div>
+    <div class="line-wrapper">
+      <div class="line" style="width: 30%; margin-left: 100px; margin-right: 30px;"></div>
+      <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis: 50%;">
+        <h1 style="font-family:'Times New Roman', Times, serif; padding-left: 0.5em; font-size: clamp(1.039rem, 1.039rem + ((1vw - 0.2rem) * 1.069), 1.6rem); font-style: normal; font-weight: 400; line-height: 1; text-transform: uppercase; letter-spacing: 0.5em;" class="has-text-align-center wp-block-site-title has-eb-garamond-font-family header-title">
+          <a href="https://mortanjt.github.io" target="_self" rel="home" aria-current="page">Math and musings</a>
+        </h1>
+        <p style="font-family:Brush Script MT; margin-top: 0.5em; font-size: 0.8rem; font-style: italic; font-weight: 400;" class="has-text-align-center wp-block-site-tagline has-eb-garamond-font-family header-text">
+          Just learning and teaching
+        </p>
+      </div>
+      <div class="line" style="width: 30%; margin-left: 30px; margin-right: 100px;"></div>
+    </div>
+  </header>
+  
+  <div class="header-links">
+    <div class="header-links-left">
+        <!-- Links to the top left -->
+        <a href="thoughts.html" class="footer-icon">
+          <img src="img/thought.png" alt="top 1" width="30" height="30">
+        </a>
+        <a href="teaching.html" class="footer-icon">
+          <img src="img/teaching.png" alt="top 2" width="30" height="30">
+        </a>
+        <a href="content.html" class="footer-icon">
+          <img src="img/content.png" alt="top 3" width="30" height="30">
+        </a>
+        <a href="video.html" class="footer-icon">
+          <img src="img/video.png" alt="top 4" width="30" height="30">
+        </a>
+    </div>
+    <div class="header-links-right">
+        <!-- Links to the top right -->
+        <a href="https://pure.fo/en/persons/mortan-janusarson-thomsen" class="footer-icon">
+          <img src="img/info.png" alt="top 5" width="30" height="30">
+        </a>
+    </div>
+</div>
+  
+
+  <!-- Rest of your website content -->
+<div class="text-field1" style=" margin-bottom: 30px;">
+  <h2 class="text-field-title">The making of</h2>
+  <p>
+    So I've been puzzling with the idea of learning some coding, and I suppose it's not too daunting, but I definently found it to be a cluttered and annoying practice! However, this in essence says a lot more about myself than it does the practice of setting up websites. 
+  </p>
+  <p>
+    Hello there, my name is Mortan! I'm a mathematician, and I tend to do mathematics for fun, which as it turns out has resulted in me ending up teaching a lot of mathematics at the University of the Faroe Islands. Anyway! Recently I've had a desire to figure out how to get relatively competent coding / programming in Python. Just as a disclaimer, I've barely made any progress with regards to Python, but I actually feel that this site is a decent result albeit a far cry from my initial goal.
+  </p>
+  <p>
+    So what's going on here? Well it's my personal website, where I write some of my thoughts. I won't limit myself to mathematics, but the content will mainly be of that nature. As I teach a lot of courses I have a desire to do a short write-up per week on a problem. Whether this is interesting or even necessary is neither here nor there, it is always good practice to train math exposition. Before ranting on about constructing the site, yes I probably have a favorite theorem, this one
+    $$
+    \int_{\partial \Omega} \omega = \int_\Omega d\omega.
+    $$
+  </p>
+  <p>
+    Now let me explain how this came to be! So about a year ago I moved away from compiling my tex documents on overleaf. It's a great site, but it's also nice to have a local editor, and vscode sounded like a great alternative to the fairly old aging programs I've used. This, however, also means I could just as well start to consider coding and whatnot. Well in comes a new big and evil actor, AI chatbots.
+  </p>
+</div>
+
+<div class="text-field2" style=" margin-bottom: 30px;">
+  <h2 class="text-field-title">Chat GPT (blasphemous?!)</h2>
+  <p>
+    So everyone has raved on about the stength of AI chatbots, and how they will upend life as we know it... geeez they're alright. Let me just say that to start with it was very uphill. The thing is that I didn't know how to construct a site and thus there was a large mismatch between us in our conversations. After a while of doing prompts and seeing the site taking shape, then it's quite clear how html code is structured. 
+  </p>
+</div>
+<div class="two-column-container" style=" margin-bottom: 30px;">
+  <div class="text-bubble">
+    <p>
+      So how was it? Annoying yet easy enough... I just say what I want, and if it doesn't work after a few tries of editing styles and body content, then I paste the entire code into Chat GPT and tell it to do as I desire in this specific code. If it's not fixed then hit it with the stick again! You almost feel sorry for making Chat GPT apologize over and over. So do I know how to make a site then? Well that really depends, since I can set a crude one up easily, but I don't really know the lines of code, so I can hardly make it look any good. Hopefully having said that, does this look any good? To be fair it's made for me, so I don't really need to care about it. I'm happy with the appearance!
+    </p>
+    <br>
+    <p>Here's a fairly common example of me asking a simple question for a third time. Just to be clear I have applied this fix a couple of times, but this time a new problem arose when layering an image over top of a colored background. Chat GPT didn't resolve it here, I just went and applied the suggested fix to an assortment of styles.
+    </p>
+  </div>
+  <div class="image-column">
+    <img src="img/chatgtpprompt.png" alt="Image" class="rounded-image">
+  </div>
+</div>
+
+<div class="text-field1" style=" margin-bottom: 30px;">
+  <h2 class="text-field-title">Worth it!</h2>
+  <p>
+    I suppose it doesn't look like much, but the things is I feel as though the outcome reflects what I initially desired. In earnest I genuinely didn't think it would turn out this polished at all. Also there's the ease of use, when I want to add additional pages. That being said, I'm certain there are easier solutions to inhereting properties between pages, but here I invoke my right to being too lazy to learn it!
+  </p>
+  <p>
+    If anyone ever reads this, I suppose the first actual entry will be something with complex numbers, since I'm teaching Mathematics 1 for engineers, and this is the starting subject. This will just be something short that doesn't take me much time.
+  </p>
+</div>
+
+<div class="text-field3" style=" margin-bottom: 80px;">
+  <h2 class="text-field-title">What can be found here?</h2>
+  <p>
+    Hopefully the site is straightforward to navigate. I've only added in a bunch of icons, but in order they essentially amount to: 
+    \begin{align}
+      &1)\quad \text{a list of my rants such as this one,} \\
+      &2)\quad \text{university courses and resources,} \\
+      &3)\quad \text{math content in written form not necessarily for courses taught,} \\
+      &4)\quad \text{and lastly videos.}
+    \end{align}
+  </p>
+  <p>
+    For the curious, there is also a link to my pure profile at the top right, and at the bottom some social links. I'm uncertain as to whether I'll start using all these social things. Both twitch and discord get used with some frequency.
+  </p>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-icons-container">
+    <div class="footer-icons">
+      <a href="https://www.twitch.tv/mortjt" class="footer-icon">
+        <img src="img/twitch-logo.png" alt="Icon 1" width="30" height="30">
+      </a>
+      <a href="https://www.youtube.com/mortanjt" class="footer-icon">
+        <img src="img/youtube.png" alt="Icon 5" width="30" height="30">
+      </a>
+      <a href="https://twitter.com/mortanjt" class="footer-icon">
+        <img src="img/twitter.png" alt="Icon 2" width="30" height="30">
+      </a>
+      <a href="https://www.instagram.com/mortanjt/" class="footer-icon">
+        <img src="img/instagram.png" alt="Icon 3" width="30" height="30">
+      </a>
+      <a href="https://www.tiktok.com/@mortjt" class="footer-icon">
+        <img src="img/tiktok.png" alt="Icon 5" width="30" height="30">
+      </a>
+      <a href="https://discord.gg/zDMarxUXJ" class="footer-icon">
+        <img src="img/discord.png" alt="Icon 4" width="30" height="30">
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
