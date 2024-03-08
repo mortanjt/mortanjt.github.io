@@ -160,7 +160,7 @@
 
     table {
       border-collapse: collapse;
-      width: 60%; /* Adjust the width of the table */
+      width: 100%; /* Adjust the width of the table */
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -181,6 +181,12 @@
     th {
       background-color: #d3d3d3;
     }
+
+    /* Adjust the width for the small column */
+.small-column {
+  width: 10%; /* Adjust the width as needed */
+  min-width: auto; /* Allow the column to shrink beyond the minimum width */
+}
 
     .container {
         display: flex;
@@ -286,45 +292,65 @@
       <thead>
         <tr>
           <th>Courses</th>
-          <th>Description</th>
+          <th class="small-column">Description</th>
+          <th class="small-column">ECTS</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <td>Topological Spaces and Foundations of Mathematics</td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/3043/2023-2024">3043.24</a></td>
+          <td class="small-column">7.5</td>
+        </tr>
+        <tr>
+          <td>Euclidean Geometry</td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/3033/2023-2024">3033.24</a></td>
+          <td class="small-column">5</td>
+        </tr>
+        <tr>
           <td>Linear Algebra for Software Engineers</td>
-          <td><a href="https://skeid.setur.fo/en/5033/2023-2024">5033.24</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/5033/2023-2024">5033.24</a></td>
+          <td class="small-column">7.5</td>
         </tr>
         <tr>
           <td>Discrete Mathematics</td>
-          <td><a href="https://skeid.setur.fo/en/5019/2023-2024">5019.23</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/5019/2023-2024">5019.23</a></td>
+          <td class="small-column">7.5</td>
         </tr>
         <tr>
           <td>Mathematics 1</td>
-          <td><a href="https://skeid.setur.fo/en/3040/2023-2024">3040.23</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/3040/2023-2024">3040.23</a></td>
+          <td class="small-column">20</td>
         </tr>
         <tr>
           <td>Project in Mathematics</td>
-          <td><a href="https://skeid.setur.fo/en/3045/2023-2024">3045.23</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/3045/2023-2024">3045.23</a></td>
+          <td class="small-column">7.5</td>
         </tr>
         <tr>
           <td>Advanced Analysis</td>
-          <td><a href="https://skeid.setur.fo/en/3044/2022-2023">3044.23</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/3044/2022-2023">3044.23</a></td>
+          <td class="small-column">7.5</td>
         </tr>
         <tr>
           <td>Linear Algebra for Software Engineers</td>
-          <td><a href="https://skeid.setur.fo/en/5033/2022-2023">5033.23</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/5033/2022-2023">5033.23</a></td>
+          <td class="small-column">7.5</td>
         </tr>
         <tr>
           <td>Discrete Mathematics</td>
-          <td><a href="https://skeid.setur.fo/en/5019/2022-2023">5019.22</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/5019/2022-2023">5019.22</a></td>
+          <td class="small-column">7.5</td>
         </tr>
         <tr>
           <td>Mathematics 2</td>
-          <td><a href="https://skeid.setur.fo/en/3172/2022-2023">3172.22</a></td>
+          <td class="small-column"><a href="https://skeid.setur.fo/en/3172/2022-2023">3172.22</a></td>
+          <td class="small-column">7.5</td>
         </tr>
         <tr>
           <td>Mathematics 1</td>
-          <td>3040.21</td>
+          <td class="small-column">3040.21</td>
+          <td class="small-column">20</td>
         </tr>
         <!-- Add more rows as needed -->
       </tbody>
