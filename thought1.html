@@ -102,6 +102,11 @@
       box-sizing: border-box;
       border-radius: 10px; /* Rounded corners */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow-x: auto; /* Add horizontal scrolling if needed on small screens */
+    }
+    
+    #equationContainer {
+      width: 100%; /* Ensure the container adapts to the screen width */
     }
 
     .text-field-title {
@@ -331,20 +336,27 @@
 
 <div class="text-field3" style=" margin-bottom: 80px;">
   <h2 class="text-field-title">What can be found here?</h2>
+  <div id="equationContainer">
   <p>
     Hopefully the site is straightforward to navigate. I've only added in a bunch of icons, but in order they essentially amount to: 
+    \[
     \begin{align}
       &1)\quad \text{a list of my rants such as this one,} \\
       &2)\quad \text{university courses and resources,} \\
-      &3)\quad \text{math content in written form not necessarily for courses taught,} \\
+      &3)\quad \text{math content in written form,} \\
       &4)\quad \text{and lastly videos.}
     \end{align}
+    \]
   </p>
   <p>
     For the curious, there is also a link to my pure profile at the top right, and at the bottom some social links. I'm uncertain as to whether I'll start using all these social things. Both twitch and discord get used with some frequency.
   </p>
 </div>
+</div>
 
+<script>
+  MathJax.typesetPromise(["#equationContainer"]);
+</script>
 
 <footer class="footer">
   <div class="footer-icons-container">
